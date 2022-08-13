@@ -1,0 +1,6 @@
+// configuração do  ambiente de desenvolvimento JavaScript- VsCode
+
+ // O VsCode foi a ferramenta escolhida para desenvolvimento. Apesar de não ser uma IDE, possui debug integrado com breakpoints, extensões, integração nativa com Git e autocomplete muito rápido. As extensões auxiliam no processo de desenvolvimento
+ // Exemplos de extensões instaladas: 
+ 1. Color Highlight – Esse plugin mostra a cor exata de todos RGB’s ou HEX em seu código, muito útil para quem trabalha com CSS ou SASS;
+ 2. EditorConfig – Plugin utilizado para padronizar quebra de linha, indentação, espaços e tabs entre desenvolvedores de um mesmo projeto.
