@@ -1,0 +1,42 @@
+# funcao +
+def adicao(numero_1,numero_2):
+	return numero_1 + numero_2
+	
+# funcao +
+def subtracao(numero_1,numero_2):
+	return numero_1 - numero_2
+
+# funcao +
+def multiplicacao(numero_1,numero_2):
+	return numero_1 * numero_2
+
+# funcao +
+def divisao(numero_1,numero_2):
+	return numero_1 / numero_2
+
+print ("\n Calculadora: \n Operações disponíveis: \n A - adicao \n S - subtracao \n M - multiplicacao \n D - divisao \n")
+
+a=int(input("Digite o primeiro número: "))
+b=int(input("Digite o segundo número: "))
+
+escolha = input("Escolha a operacao:")
+
+
+#adicao
+if escolha == 'a':
+	print(adicao(a,b))
+
+#subtracao
+if escolha =='s':
+	print(subtracao(a,b))
+
+#multiplicacao
+if escolha == 'm':
+	print(multiplicacao(a,b))
+
+#divisao
+if escolha == 'd':
+	print (divisao(a,b))
+
+if escolha != 'a' 's' 'm' 'd':
+	print ("0")
