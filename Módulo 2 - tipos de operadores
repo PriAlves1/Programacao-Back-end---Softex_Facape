@@ -51,3 +51,4 @@ Escreva ("Reprovados por média ", (reprovado_media));
 Escreva ("Reprovados por falta ", (reprovado_falta));
 
 fim
+}
