@@ -1,0 +1,16 @@
+//Faça um código que execute a contagem regressiva de uma bomba, informando o número de segundos para explodir. Ele deverá mostrar a mensagem “iniciando contagem regressiva”, os segundos passados e, no final, a mensagem “BUM!”.
+//Torne o sistema  realista para que o tempo realmente passe em segundos usando a função time.sleep() 
+
+programa {
+	funcao inicio() {
+  
+from time import sleep
+
+print ("iniciando contagem regressiva")
+for contagem in range(10, -1, -1):
+	print(contagem)
+	sleep(0.5) // tempo de meio segundo entre os números
+print("BUM!")
+
+fim
+}
