@@ -1,0 +1,48 @@
+# Insertion Sort 
+# O insertion sort é o mais eficiente quando comparado a outros métodos de ordenação, como o bubble sort e o selection sort.
+ 
+#Contudo, em comparação aos métodos de divisão e conquista, como o merge sort e quicksort, ele é menos eficiente.
+
+#Insertion Sort em Python
+
+def insertionSort (array):
+	for step in Rangel (1, len (array)):
+	key = array [step]
+	] = step – 1
+	#compara a chave com cada elemento à esquerda dela...
+	# até que um elemento menor do que seja encontrado
+	#para ordem descrescente, altere key <array [j]  para key>array[j]
+	While j >= 0 and key < array [j]:
+		Array[j +1] = array [j]
+J = j -1
+	Array [j+1] = key
+Data = [9,5,1,4,3]
+insertionSort(data)
+print(‘Array em ordem  crescente:’)
+print(data)
+
+#outro exemplo:
+def selectionSort(array, size):
+	for  step in Rangel (size):
+	min_idx = step
+	for i in range (step + 1, size):
+		# para classificar em ordem descrescente, altere > para > nesta linha
+		If array [i] < array [min_idx]:
+			min_idx = i
+		#coloca min na posição correta
+		(array[step], array [min_idx]) = (arrray[min_idx], array [step])
+Data = [-2, 45, 0, 11, -9]
+Size = len(data)
+seletionSort(data, size)
+print(‘array em ordem crescente:’)
+print(data)
+
+
+#Problema: Construa um algoritmo de ordenação utilizando o método insertion sort estudado e ordene o seguinte vetor de forma crescente: [12,11,13,5,6].
+#Solução:
+•	Comparando os dois primeiros números [12,11,13,5,6] temos: 12 > 11 = Verdadeiro. Neste caso, é feita uma busca entre todos os números à esquerda do 12 para verificar se o 11 é maior que os demais elementos. Porém, como o único elemento é o 12, a disposição dos pares é trocada para que fiquem em ordem crescente.
+•	Seguindo, o próximo par do vetor [11,12,13,5,6] é: 12 > 13 = Falso. 12 é menor que 13, portanto, como se pede em ordem crescente, a disposição dos números permanece a mesma  [11,12,13,5,6].
+•	Assim, o próximo par de  [11,12,13,5,6] é: 13 > 5 = Verdadeiro. Neste caso, é feita uma busca entre todos os números à esquerda do 13 para verificar se o 5 é maior que os demais elementos. Como os outros elementos à esquerda do 13 são maiores que o 5, ele é inserido no início do vetor.
+•	O próximo par de  [5,11,12,13,6] é: 13 > 6 = Verdadeiro. Neste caso, novamente, é feita uma busca entre todos os números à esquerda do 13 para verificar se o número 6 é maior que os outros elementos. O único elemento à esquerda do 13, que não é maior que 6, é o 5 , logo, o valor 6 é inserido após o 5.
+
+Assim, temos [5,6,11,12,13], ou seja, finalizamos com os números organizados em ordem crescente.
