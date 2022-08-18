@@ -19,24 +19,23 @@ print ("\n Calculadora: \n Operações disponíveis: \n A - adicao \n S - subtra
 a=int(input("Digite o primeiro número: "))
 b=int(input("Digite o segundo número: "))
 
-escolha = input("Escolha a operacao:")
+escolha = str(input("Escolha a operacao:"))
 
 
-#adicao
+
 if escolha == 'a':
 	print(adicao(a,b))
 
-#subtracao
-if escolha =='s':
-	print(subtracao(a,b))
+elif escolha == 's':
+    print(subtracao(a,b))
 
-#multiplicacao
-if escolha == 'm':
+
+elif escolha == 'm':
 	print(multiplicacao(a,b))
 
-#divisao
-if escolha == 'd':
-	print (divisao(a,b))
 
-if escolha != 'a' 's' 'm' 'd':
-	print ("0")
+elif escolha == 'd':
+	print (divisao(a,b))
+	
+else:
+    print('0')
