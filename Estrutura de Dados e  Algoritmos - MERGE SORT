@@ -1,0 +1,92 @@
+# O merge sort, ou ordenação por mistura, é um exemplo de algoritmo de ordenação por comparação do tipo dividir-para-conquistar.
+# Sua ideia básica consiste em Dividir (o problema em vários subproblemas e resolver esses subproblemas através da recursividade) e Conquistar (após todos os subproblemas terem sido resolvidos ocorre a conquista que é a união das resoluções dos subproblemas). Como o algoritmo Merge Sort usa a recursividade, há um alto consumo de memória e tempo de execução, tornando esta técnica não muito eficiente em alguns problemas.
+Algoritmo
+# Os três passos úteis dos algoritmos de divisão e conquista, ou divide and conquer, que se aplicam ao merge sort são:
+1.	Dividir: Calcula o ponto médio do sub-arranjo, o que demora um tempo constante  ;
+2.	Conquistar: Recursivamente resolve dois subproblemas, cada um de tamanho n/2, o que contribui com   para o tempo de execução;
+3.	Combinar: Unir os sub-arranjos em um único conjunto ordenado, que leva o tempo 
+# Comparação com outros algoritmos de ordenação por comparação
+# Em comparação a outros algoritmos de divisão e conquista, como o Quicksort, o Merge apresenta a mesma complexidade. Já em comparação a algoritmos mais básicos de ordenação por comparação e troca (bubble, insertion e selection sort), o Merge é mais rápido e eficiente quando é utilizado sobre uma grande quantidade de dados[1]. Para entradas pequenas os algoritmos de ordenação por comparação mais básicos são pró-eficientes.
+
+# A sua eficiência é a mesma para melhor, pior e caso médio, independentemente de como os dados do array estão organizados a ordenação será eficaz.
+Obs.: O Bubble sort apresenta melhor caso como  porque o algoritmo pode ser modificado de forma que, se a lista já estiver ordenada, basta apenas uma verificação básica que custa  [3]. O Quick sort pode atingir um tempo de  em um caso específico quando o particionamento é desequilibrado.
+# Desvantagens
+•	Utiliza funções recursivas;
+•	Gasto extra de memória. O algoritmo cria uma cópia do vetor para cada nível da chamada recursiva, totalizando um uso adicional de memória igual a O (n log n).
+# Pseudocódigo:
+
+função mergesort (vetor a)
+     se (n == 1) retornar a
+
+     vetor l1 = a[0] ... a[n/2]
+     vetor l2 = a[n/2 + 1] ... a[n]
+
+     l1 = mergesort(l1)
+     l2 = mergesort(l2)
+
+     retornar mesclar(l1, l2)
+fim da função mergesort
+função mesclar (vetor a, vetor b)
+     vetor c
+
+     enquanto (a e b têm elementos)
+          if (a[0] > b[0])
+               adicionar b[0] ao final de c
+               remover b[0] de b
+          senão
+               adicionar a[0] ao final de c
+               remover a[0] de a
+     enquanto (a tem elementos)
+          adicionar a[0] ao final de c
+          remover a[0] de a
+     enquanto (b tem elementos)
+          adicionar b[0] ao final de c
+          remover b[0] de b
+     retornar c
+fim da função mesclar
+
+#Código em Python:
+
+def mergeSort(lista):
+
+    if len(lista) > 1:
+
+        meio = len(lista)//2
+        #também é valido: meio = int(len(lista)/2)
+
+        listaDaEsquerda = lista[:meio]
+        listaDaDireita = lista[meio:]
+
+        mergeSort(listaDaEsquerda)
+        mergeSort(listaDaDireita)
+
+        i = 0
+        j = 0
+        k = 0
+
+        while i < len(listaDaEsquerda) and j < len(listaDaDireita):
+
+            if listaDaEsquerda[i] < listaDaDireita[j]:
+                lista[k]=listaDaEsquerda[i]
+                i += 1
+            else:
+                lista[k]=listaDaDireita[j]
+                j += 1
+            k += 1
+
+        while i < len(listaDaEsquerda):
+
+            lista[k]=listaDaEsquerda[i]
+            i += 1
+            k += 1
+
+        while j < len(listaDaDireita):
+            lista[k]=listaDaDireita[j]
+            j += 1
+            k += 1
+    return lista
+
+
+
+
+
