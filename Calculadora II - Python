@@ -1,0 +1,26 @@
+print("CALCULADORA")
+print("**************************")
+
+operacao = input ("Digite o nome da operacao : \n 1.Soma \n 2.Subtração \n 3.Multiplicação \n 4.Divisão \n 0.Sair \n ")
+
+while operacao != "sair":
+	numero1=int(input("Digite o primeiro número: "))
+	numero2=int(input("Digite o segundo número: "))
+
+	if operacao == "soma":
+		resultado = int(numero1) + int(numero2)
+	elif operacao == "sub":
+		resultado = int(numero1) - int(numero2)
+	elif operacao == "mult":
+		resultado = int(numero1) * int(numero2)
+	elif operacao == "div":
+		resultado = int(numero1) / int(numero2)
+	else:
+		resultado = "essa opção não existe: digite o nome da operação"
+	
+	print (resultado)
+	print("*-----------------------------------*")
+	break
+while operacao == "sair":
+	print ("FIM")
+	break
