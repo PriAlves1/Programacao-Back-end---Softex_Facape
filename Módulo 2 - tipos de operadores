@@ -1,0 +1,53 @@
+
+  //Desenvolva um programa que utiliza o nome de um aluno, duas notas e a quantidade de faltas que ele teve. Conclua se o aluno está aprovado ou reprovado de acordo com as especificações:
+
+// Se a média do aluno for menor que sete, o sistema deve informar o nome do aluno e que ele está reprovado;
+// Se o aluno possuir mais de três faltas, o sistema deve informar o nome do aluno e que ele está reprovado;
+// Se a média do aluno for maior ou igual a sete, o sistema deve informar o nome do aluno e que ele está aprovado.
+
+//No sistema, todos os valores devem estar armazenados em variáveis.
+
+programa {
+	funcao inicio() {
+
+aluno: caracter
+nota1, nota2, media: real
+falta: inteiro
+
+aprovado_media, reprovado_media, reprovado_falta: vetor
+
+inicio
+
+media <- nota1+nota2 / 2
+nota1<- 0
+nota2 <- 0
+falta <- 0
+
+Escreva ("Nome:");
+leia (aluno);
+escreva("Primeira nota");
+leia (nota1);
+escreva ("Segunda Nota");
+leia (nota2);
+escreva ("Número de faltas:");
+leia (falta);
+
+Se (media >= 7) ou (nota = 10) entao:
+aprovado_media <- [aluno, media];
+
+senao: 
+	adiciona (aluno) a [reprovado_media];
+
+se falta > 3 entao:
+
+adiciona (aluno) a [reprovado_falta];
+
+fimenquanto
+
+Escreva ("Aprovados por média ", (aprovado_media));
+
+Escreva ("Reprovados por média ", (reprovado_media));
+
+Escreva ("Reprovados por falta ", (reprovado_falta));
+
+fim
