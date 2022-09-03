@@ -1,0 +1,10 @@
+import pandas as pd
+tabela = pd.read_csv("notas_alunos.csv", sep=";")
+print(tabela)
+
+tabela.loc[(tabela['Média']>= 7) & (tabela['faltas']<=5), "situação"]='aprovado '
+tabela.loc[(tabela['Média']< 7) & (tabela['faltas']>5), "situação"]='reprovado '
+tabela.loc[(tabela['Média']>= 7) & (tabela['faltas']>5), "situação"]='reprovado '
+tabela.loc[(tabela['Média']< 7) & (tabela['faltas']<5), "situação"]='reprovado '
+
+tabela
