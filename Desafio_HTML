@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Menu Navigation</title>
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="index.css">
+
+  </head>
+  <body>
+   
+
+<header>
+    
+        <img src="img/softex-removebg-preview.png"> <!--para adicionar imagem eu posso usar dentro da pasta img ou fora usando o ./nomedaimagem-->
+    <nav>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Testimonials</li>
+</nav>
+    
+
+
+
+
+</header>
+
+
+
+
+  </body>
+</html>
+
+//CSS: edicao das partes contidas no html
+
+header{
+    background-color: #979290;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction:line;
+}
+
+
+h2{
+    margin-top: 30px;
+}
+nav{
+    display: flex;
+    margin-left: 70%;
+    margin-top: 30px;
+}
+
+li{
+    display: flex;
+    margin-left: 20px;
+}
+
+img{
+    width: 100px; 
+    height: 100px;
+    
+}
