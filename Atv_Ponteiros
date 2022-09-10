@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h> //necessário para usar as funções malloc() e free()
+#include <conio.h>
+int main(void)
+
+{float *ponteiro; //definindo o ponteiro 
+  int i, vetor=22;
+  
+  printf("informe o numero de componentes do vetor\n");
+  scanf("%d", &vetor);
+  
+  
+  ponteiro = (float *) malloc(vetor * sizeof(float));//converter o ponteiro para o tipo de dados desejado com a função malloc
+  
+  for (i=0; i <vetor; i++)
+  {
+  	printf("\nDigite o valor para a posicao %d do vetor:", i+1);
+  	scanf("%f",&ponteiro[i]);
+  	
+  }
+  printf("\n*** Valores do vetor dinamico**\n");//percorrendo o vetor e imprimindo valores
+  
+  for (i=0;i <vetor;i++)
+  {
+  	printf("%.2f\n",ponteiro[i]);
+  }
+  
+  free(ponteiro);//liberando o espaço da memoria alocado
+  getch();
+  return 0;
